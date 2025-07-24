@@ -45,12 +45,18 @@ tracing-subscriber.workspace = true
 typespec_macros.path = "../typespec_macros"
 
 [features]
-default = ["http", "json", "reqwest", "reqwest_deflate", "reqwest_gzip"]
+default = [
+  "http",
+  "json",
+  "reqwest_native_tls",
+  "reqwest_deflate",
+  "reqwest_gzip",
+]
 debug = ["typespec_macros?/debug"]
 derive = ["dep:typespec_macros"]
 http = ["typespec/http"]
 json = ["typespec/json"]
-reqwest = ["reqwest/native-tls"]
+reqwest_native_tls = ["reqwest/native-tls"]
 reqwest_deflate = ["reqwest/deflate"]
 reqwest_gzip = ["reqwest/gzip"]
 reqwest_rustls = ["reqwest_rustls_native_roots"]
