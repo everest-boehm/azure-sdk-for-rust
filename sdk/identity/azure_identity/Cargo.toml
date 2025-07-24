@@ -23,7 +23,7 @@ serde.workspace = true
 time.workspace = true
 tokio = { workspace = true, optional = true }
 tracing.workspace = true
-typespec_client_core = { workspace = true, features = [
+typespec_client_core = { workspace = true, default-features = false, features = [
   "derive",
 ] }
 url.workspace = true
