@@ -23,7 +23,9 @@ serde.workspace = true
 time.workspace = true
 tokio = { workspace = true, optional = true }
 tracing.workspace = true
-typespec_client_core = { workspace = true, features = ["derive"] }
+typespec_client_core = { workspace = true, features = [
+  "derive",
+] }
 url.workspace = true
 
 [dev-dependencies]
